@@ -1,156 +1,86 @@
-/*.main-grid{
-    background: orange;
-    clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+.container{
+    display: flex;
     width: 100%;
-    height: 250px;
-}*/
-
-.bg{
-    position: absolute;
-    background: orange;
-    //clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
-    clip-path: polygon(0 0, 22% 0, 100% 100%, 0% 100%);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-}
-
-.main-grid{
-    min-width: 100vw;
-    min-height: 100vh;
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: 49% 51%;
-    grid-template-rows: 100%;
-    .secundary-grid-1{
-        grid-column: 1/2;
-        display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: repeat(5, auto);
-        background: pink;
-        //sidebar
-        .side-bar-container{
-            grid-column: 1/2;
-            grid-row: 1/6;
+    height: 100vh;
+    //background: linear-gradient(#010104, #0e1620);
+    background: linear-gradient(#4e4e4e, #7b7b7b);
+    /*min-width: 100vw;
+    min-height: 100vh;*/
+    //z-index: -4;
+    .bg{
+        position: absolute;
+        /* background: orange; */
+        //background: linear-gradient(#4e4e4e, #7b7b7b);
+        background: linear-gradient(#010104, #0e1620);
+        clip-path: polygon(0 0, 22% 0, 100% 100%, 0% 100%);
+        top: 0;
+        left: 0;
+        //min-width: 100vw;
+        //min-height: 100vh;
+        z-index: -2;
+    }
+    .banner{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        .section-bannerleft{
             display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
-            //gap: 5%;
+            background: orange;
+            .logo-container{
+                display: flex;
+                width: 100%;
+            }
+            .media-socials{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .section-bannerRight{
+            display: flex;
+            width: 100%;
+            justify-content: center;
             align-items: center;
             background: green;
-            .left-logo-container{
-                background: purple;
-                a{
-                    cursor: pointer;
-                    img{
-                        width: 3rem;
-                    }
-                    img:hover{
-                        opacity: 0.6;
-                    }
-                }
-            }
-
-            .left-socials-container{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 100vh;
-                //gap: 5%;
-                margin-bottom: 0.2rem;
-                background: red;
-                a{
-                    font-size: 50px;
-                }
-                a:hover{
-                    opacity: 0.6;
-                }
-            }
         }
-
-        //Navabar
-        nav{
-            grid-column: 2/3;
-            grid-row: 1/2;
-            ul{
-                background: lightblue;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                list-style: none;
-                gap: 2rem;
-                
-                color: black;
-                li{
-                    a{
-                        display: block;
-                        text-decoration: none;
-                        color: whitesmoke;
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-
-        //slogan
-        .slogan-container{}
-
-        //actionButton
-        .action-button-container{}
-
-        //mainp
-        .slogan-p-container{}
-
-        //carousel
-        .carousel-container{}
     }
+}
 
-    .secundary-grid-2{
-        //Main Product cart
-        .main-product-cart{}
-
-        .cart-single{}
-
-        .cart-multi{}
-
-        .inputs{
-            .input{
-                input[type='radio']::after{
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 15px;
-                    top: -2px;
-                    left: -1px;
-                    position: relative;
-                    background-color: #c4c4c4;
-                    display: inline-block;
-                    content: '';
-                    visibility: visible;
-                    border: 2px solid white;
+@media screen and (max-width: 768px) {
+    .container{
+        .banner{
+            flex-direction: row;
+            .section-bannerleft{
+                width: 60%;
+                background: orange;
+                padding: 5px;
+                .logo-container{
+                    height: 30vh;
+                    background: purple;
+                    justify-content: start;
+                    align-items: center;
+                    .img{
+                        width: 50px;
+                        height: 50px;
+                        background: red;
+                    }
                 }
-                input[type='radio']:checked::after{
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 15px;
-                    top: -2px;
-                    left: -1px;
-                    position: relative;
-                    background-color: rgb(65, 65, 65);
-                    display: inline-block;
-                    content: '';
-                    visibility: visible;
-                    border: 2px solid white;
+
+                .media-socials{
+                    flex-direction: row;
                 }
             }
-        }
-
-        //MAIN PRODUCT DISPLAYED
-        .main-product{
-            .img-product-container{}
-
-            .points-container{}
+            .section-bannerRight{
+                width: 40%;
+                background: purple;
+            }
         }
     }
 }
