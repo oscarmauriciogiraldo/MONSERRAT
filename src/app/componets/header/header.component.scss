@@ -2,23 +2,30 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
+    align-items: center;
     //position: fixed;
     top: 0;
     left: 0;
     background: black;
     .header-superior{
-        max-width: 1200px;
-        margin: auto;
+        max-width: 1400px;
+        //margin: auto;
         display: flex;
         width: 100%;
-        flex-direction: row;
-        justify-content:space-between;
-        align-items:center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         //background-color: aqua;
         .logo{
+            display: flex;
             //background: black;
-            width: 150px;
+            width: 350px;
+            justify-content: center;
+            align-items: center;
             object-fit: cover;
+            cursor: pointer;
+            //background: green;
             img{
                 width: 100%;
             }
@@ -26,31 +33,59 @@ header{
         .social-media{
             display: flex;
             width: 30%;
-            padding: 10px;
+            //padding: 20px 0px;
+            padding-top: 0;
+            padding-bottom: 20px;
             justify-content:space-around;
             align-items: center;
             //background: green;
             i{
-                font-size: 20px;
+                font-size: 25px;
                 font-weight: 400;
                 color: #fff;
+                cursor: pointer;
+                transition: all 300ms ease;
             }
+            i:hover{
+                transform: scale(1.1);
+            }
+            .pi-instagram:hover{
+                border-radius: 5px;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+            }
+            .pi-facebook:hover{
+                color: #4267B2;
+            }
+            .pi-twitter:hover{
+                color: #1DA1F2;
+            }
+
         }
 
     }
 
     .container__menu{
+        display: flex;
         width: 100%;
-        height: 70px;
+        justify-content: center;
+        align-items: center;
+        //height: 70px;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
         //background: indianred;
+        padding: 15px;
         .menu{
-            max-width: 1200px;
-            margin: auto;
-            height: 100%;
+            //max-width: 1200px;
+            //margin: auto;
+            //height: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 15px;
             nav{
-                height: 100;
+                //height: 100;
                 ul{
                     height: 100%;
                     display:flex;
@@ -64,14 +99,15 @@ header{
                             display: flex;
                             align-items: center;
                             padding: 14px;
-                            color: #fff;
+                            color: black;
                             text-transform: uppercase;
-                            font-size: 14px;
+                            font-size: 16px;
+                            font-weight: 700;
                             transition: all 300ms ease;
                         }
                         a:hover{
                             transform: scale(1.1);
-                            background: #fff;
+                            //background: #fff;
                         }
                     }
                 }
@@ -79,3 +115,50 @@ header{
         }
     }
 }
+
+/*
+    <header>
+    <div class="header-superior">
+        <div class="logo">
+            <img src="assets/img/BLANCO BY ALEJANDRA.png" alt="">
+        </div>
+        <div class="social-media">
+            <!-- <input type="search" name="" id=""> -->
+            <i class="pi pi-instagram"></i>
+            <i class="pi pi-linkedin"></i>
+            <i class="pi pi-facebook"></i>
+            <i class="pi pi-twitter"></i>
+        </div>
+    </div>
+
+    <div class="container__menu">
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="">
+                        <i class="pi pi-home"></i>
+                    </a></li>
+                    <li>
+                        <a href="">Tienda</a>
+                        <!-- <ul>
+                            <li><a href="">Moda</a></li>
+                            <li><a href="">Calzado</a></li>
+                        </ul> -->
+                    </li>
+                    <li>
+                        <a href="">Colecciones</a>
+                        <!-- <ul>
+                            <li><a href="">By akejandra</a></li>
+                            <li><a href="">Legendaria</a></li>
+                            <li><a href="">night</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="">Nosotras</a></li>
+                    <li><a href="">Ayuda y condiciones</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+*/
