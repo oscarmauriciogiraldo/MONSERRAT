@@ -12,6 +12,7 @@ import { SwiperModule } from 'swiper/angular';
 import { CategoriasComponent } from './pages/landing-monserrat/categorias/categorias.component';
 import { ColeccionesComponent } from './pages/landing-monserrat/colecciones/colecciones.component';
 import { BannerPortadaComponent } from './pages/landing-monserrat/banner-portada/banner-portada.component';
+import { SocialMediaComponent } from './componets/social-media/social-media.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BannerPortadaComponent } from './pages/landing-monserrat/banner-portada
     NosotrosComponent,
     CategoriasComponent,
     ColeccionesComponent,
-    BannerPortadaComponent
+    BannerPortadaComponent,
+    SocialMediaComponent
   ],
   imports: [
     BrowserModule,
