@@ -1,43 +1,70 @@
 <header>
     <div class="header-superior">
         <div class="logo">
-            <img src="assets/img/BLANCO BY ALEJANDRA.png" alt="">
+            <img src="assets/img/logo.png" alt="">
         </div>
-        <div class="social-media">
+       <!--  <div class="social-media">
             <input type="search" name="" id="">
-            <!-- <i class="pi pi-instagram"></i>
+            <i class="pi pi-instagram"></i>
             <i class="pi pi-linkedin"></i>
             <i class="pi pi-facebook"></i>
-            <i class="pi pi-twitter"></i> -->
-        </div>
+            <i class="pi pi-twitter"></i>
+        </div> -->
     </div>
 
-    <!-- <div class="container__menu">
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="">
-                        <i class="pi pi-home"></i>
-                    </a></li>
-                    <li>
-                        <a href="">Tienda</a>
-                        !-- <ul>
-                            <li><a href="">Moda</a></li>
-                            <li><a href="">Calzado</a></li>
-                        </ul> --
-                    </li>
-                    <li>
-                        <a href="">Colecciones</a>
-                        !-- <ul>
-                            <li><a href="">By akejandra</a></li>
-                            <li><a href="">Legendaria</a></li>
-                            <li><a href="">night</a></li>
-                        </ul> --
-                    </li>
-                    <li><a href="">Nosotras</a></li>
-                    <li><a href="">Ayuda y condiciones</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="container__menu">
+      <div class="menu">
+          <nav>
+              <ul>
+                  <li><a href="">
+                      <i class="pi pi-home"></i>
+                  </a></li>
+                  <li>
+                      <a href="">Tienda</a>
+                      <!-- !-- <ul>
+                          <li><a href="">Moda</a></li>
+                          <li><a href="">Calzado</a></li>
+                      </ul> -- -->
+                  </li>
+                  <li>
+                      <a href="">Colecciones</a>
+                      <!-- !-- <ul>
+                          <li><a href="">By akejandra</a></li>
+                          <li><a href="">Legendaria</a></li>
+                          <li><a href="">night</a></li>
+                      </ul> -- -->
+                  </li>
+                  <li><a href="">Nosotras</a></li>
+                  <li><a href="">Ayuda y condiciones</a></li>
+              </ul>
+
+          </nav>
+      </div>
+    </div>
+
+    <!-- <div class="toggle_btn" (click)="toggleDropDownMenu()">
+      <i class="fa-solid fa-bars"></i>
     </div> -->
+
+    <button class="toggle_btn" (click)="toggleDropDownMenu()">
+      <div [class.active]="showDropDownMenu"></div>
+      <div [class.active]="showDropDownMenu"></div>
+      <div [class.active]="showDropDownMenu"></div>
+    </button>
+
+    <div class="dropdown_menu" [class.active]="showDropDownMenu">
+      <li><a href="">
+        <i class="pi pi-home"></i>
+        Inicio
+      </a></li>
+      <li>
+          <a href="">Tienda</a>
+
+      </li>
+      <li>
+          <a href="">Colecciones</a>
+      </li>
+      <li><a href="">Nosotras</a></li>
+      <li><a href="">Ayuda y condiciones</a></li>
+    </div>
 </header>
